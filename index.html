@@ -1,39 +1,148 @@
-You are a web designer who builds one-page personal websites for students and early-career people. Build me a single-file personal website from my brief below.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oyonti Hridita Nasir · Data tools for nonprofits</title>
+<meta name="description" content="I build data tools for nonprofits, like Donation Optimizer. I'm looking for people in nonprofit tech to learn from, and problems worth solving.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Oyonti Hridita Nasir · Data tools for nonprofits">
+<meta property="og:description" content="I build data tools for nonprofits, like Donation Optimizer. I'm looking for people in nonprofit tech to learn from, and problems worth solving.">
+<meta property="og:url" content="https://hridita11.github.io">
+<link rel="canonical" href="https://hridita11.github.io">
+<link rel="me" href="https://www.linkedin.com/in/oyonti-hridita-nasir/">
+<link rel="me" href="https://github.com/hridita11">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F7F5FA; --ink:#221A2B; --muted:#5E5468; --accent:#7A2E6E; --accent-dark:#5C2152; --rule:#DDD5E6; --card:#FFFFFF;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 "Figtree",system-ui,sans-serif;-webkit-text-size-adjust:100%}
+main{max-width:42rem;margin:0 auto;padding:3.5rem 1.25rem 4rem}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.15;margin:0}
+h1{font-size:clamp(2.4rem,9vw,3.75rem);font-weight:700;letter-spacing:-.02em}
+h2{font-size:1.6rem;font-weight:700;margin-bottom:1.25rem}
+h3{font-size:1.3rem;font-weight:500;margin-bottom:.6rem}
+section{margin-top:4rem}
+a{color:var(--accent);text-underline-offset:.2em}
+a:hover{color:var(--accent-dark)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:3px}
+mark{background:#FFE600;color:#222;padding:.05em .3em;border-radius:3px}
+.role{margin:.9rem 0 0;color:var(--muted)}
+.oneliner{font-size:1.3rem;line-height:1.5;margin:1.5rem 0 1.75rem;max-width:34rem}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;padding:.85rem 1.4rem;border-radius:999px}
+.btn:hover{background:var(--accent-dark);color:#fff}
+.now{margin-top:2rem;padding:.9rem 1.1rem;background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--accent);border-radius:6px}
+.now b{font-weight:600}
+.feat{padding:0 0 0 1.25rem;margin-bottom:2.5rem;border-left:3px solid var(--accent)}
+.feat dl{margin:0}
+.feat dt{font-weight:600;margin-top:.7rem}
+.feat dd{margin:.1rem 0 0}
+.feat .meta{color:var(--muted);font-size:.95rem;margin:0 0 .4rem}
+.work{list-style:none;margin:0;padding:0}
+.work li{display:grid;grid-template-columns:8.5rem 1fr;gap:.25rem 1rem;padding:.75rem 0;border-top:1px solid var(--rule)}
+.work li:last-child{border-bottom:1px solid var(--rule)}
+.work time{color:var(--muted);font-size:.95rem}
+.contact{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem 1.75rem}
+footer{margin-top:4rem;color:var(--muted);font-size:.9rem}
+@media (max-width:34rem){.work li{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Oyonti Hridita Nasir</h1>
+    <p class="role">Computing Science student, University of Alberta · Edmonton</p>
+    <p class="oneliner">I build data tools for nonprofits, like Donation Optimizer. I'm looking for people in nonprofit tech to learn from, and problems worth solving.</p>
+    <a class="btn" href="mailto:oyonti@ualberta.ca">Email me about a problem worth solving</a>
+    <p class="now"><b>Now:</b> Getting ready for natHACKS in November. <mark>[What else are you working on this month?]</mark></p>
+  </header>
 
-Rules:
-- Write for ONE reader: A program or data lead at a small Edmonton-area nonprofit who has more data and more questions than anyone with time to answer them.. Every line should make sense to them.
-- First screen: my name, my one-liner, and one clear button for my next step (people in nonprofit tech to learn from, and problems worth solving). The button links to my email or a link I gave you. Never invent one.
-- This is my home base for years, not a one-off page. Build it to grow.
-- A "Featured" section with my 2–3 strongest items. For each: the problem, the decision I made and why, the result, and the link. If any of those is missing, write a short [placeholder question] for me to answer, like [What did you decide here?]. If I gave no link, show no link. Never invent a link.
-- A "Work" section listing every other item from my brief, newest first: one line each with the date, what it was, and its link. Build it as a simple list I can keep adding to, and put this comment right above the first item: <!-- ADD NEW WORK HERE: copy one item, paste it at the top, edit it -->
-- A short "Now" line near the top: what I'm working on this month. Use a [placeholder] if I didn't say.
-- Never invent facts, numbers, employers, awards or quotes. If something is missing, leave a [placeholder] I can fill in.
-- Wrap every [placeholder] in a bright yellow <mark> so I can spot it. Never put a placeholder inside a link, the <title> or any meta tag: if something is missing there, just use my name. If I didn't give a link, leave the link out completely; never link to a site's homepage instead.
-- A short About (3 sentences max) built from what pulls me in and what makes me different. Then contact links: email, LinkedIn, GitHub.
-- Plain, specific language. Do not use: passionate, driven, results-oriented, leverage, synergy, innovative.
-- It should feel warm and friendly. Choose one accent colour and one or two Google Fonts that fit. Readable on a phone. Fast. No images I'd have to supply.
-- Make it easy to find when someone Googles my name: the page <title> is my full name, a middle dot, then a short label for what I do (for example "Priya Sharma · Rehab-tech developer"), my full name is in the first heading, add a meta description of my one-liner and Open Graph tags, and link to my LinkedIn and GitHub with rel="me".
-- Output one complete index.html file (all CSS inside it, no frameworks) in a single code block, and nothing else.
+  <section id="featured" aria-labelledby="featured-h">
+    <h2 id="featured-h">Featured</h2>
 
-My brief:
-Name: Oyonti Hridita Nasir
-What I do: build data tools for nonprofits
-1. My one reader: A program or data lead at a small Edmonton-area nonprofit who has more data and more questions than anyone with time to answer them.
-2. The problem of theirs that pulls me in: Small nonprofits run on spreadsheets, scattered records, and manual reporting, so they struggle to show their impact or decide where limited resources go. I’m drawn to turning that messy data into something a non-technical team can act on.
-3. What I can prove:
-Donation Optimizer · 2026 · Chose to match donations to GoFundMe campaigns that a gift would complete or push to a milestone, and showed the reasoning in plain language. Built with FastAPI, SQLite, and Next.js, with a periodic data-fetch pipeline because GoFundMe has no public API · [add live link or GitHub link]
-Chronically Online · Harvest Anti-Muslim Hate Hackathon (GNCI) · Built a 30-minute browser simulation of how a false claim spreads across six fictional platforms, scored on Harmful Reach vs. Awareness. Chose deterministic mechanics and no network calls so it’s transparent and safe to run · [add result/placement if any] · demo video
-Breathless and Weighty (Youreka Edmonton) · 2024 · Led a 4-person team through an Alberta-wide study of facility emissions and adult obesity rates, using regression and correlation in R · found regional patterns across provinces · [add link if there’s a report]
-COOKED · HackEd 2026 · Built a Socratic AI assistant that asks guiding questions instead of giving answers. I helped build the backend that filters LLM output (no spoon-feeding) and a React frontend · [add link]
-Shine and Rise · HackEd Beta 2024 · Sunlight alarm in Python that processes phone light-sensor data and triggers above a set lux threshold · won “Funniest Git Commit”
-Spotify Genre Prediction · 2024 · Cleaned and analyzed a large dataset, engineered features, and communicated model limits to non-technical audiences
-Ray tracer in C · 2024 · Built a full 3D ray-tracing pipeline
-Event Management App · Android and Firebase app for events, lotteries, and waitlists
-BGCBigs · Dec 2024 – present · Program staff running daily youth programming across sites, including as relief staff stepping into new groups on short notice
-Armstrong Immigration Law · Dec 2025 – present · Legal administrative assistant preparing documentation for accuracy and compliance
-Ada’s Team · Jan 2026 – present · Peer tutor
-natHACKS 2026 · Nov 2026
-4. What makes me different, and from whom: Most CS students building for good have never worked in a nonprofit. I have, for 2+ years, on the frontline with kids, while working 30+ hours a week and studying full time. As relief staff at BGCBigs I often walked into a program where I knew nobody and had to connect with the group right away. That taught me to meet people where they are, which is the same skill as designing tools for staff who aren’t technical.
-5. What I want them to do next: people in nonprofit tech to learn from, and problems worth solving
-Contact: oyonti@ualberta.ca · https://www.linkedin.com/in/oyonti-hridita-nasir/ · github.com/hridita11
-My website will be: https://hridita11.github.io
+    <article class="feat">
+      <h3>Donation Optimizer</h3>
+      <p class="meta">2026 · FastAPI, SQLite, Next.js</p>
+      <dl>
+        <dt>The problem</dt>
+        <dd><mark>[What problem were you solving for donors or campaigns?]</mark></dd>
+        <dt>What I decided, and why</dt>
+        <dd>I matched each donation to GoFundMe campaigns that the gift would complete or push to a milestone, and showed the reasoning in plain language. GoFundMe has no public API, so I built a periodic data-fetch pipeline to keep campaign data current.</dd>
+        <dt>The result</dt>
+        <dd><mark>[What was the result?]</mark></dd>
+        <dt>Link</dt>
+        <dd><mark>[Add a live link or GitHub link when you have one]</mark></dd>
+      </dl>
+    </article>
+
+    <article class="feat">
+      <h3>Chronically Online</h3>
+      <p class="meta">Harvest Anti-Muslim Hate Hackathon (GNCI)</p>
+      <dl>
+        <dt>The problem</dt>
+        <dd>A false claim can spread across platforms faster than anyone can check it, and people who respond need practice making calls under that pressure.</dd>
+        <dt>What I decided, and why</dt>
+        <dd>I built a 30-minute browser simulation of a false claim spreading across six fictional platforms, scored on Harmful Reach against Awareness. I chose deterministic mechanics and no network calls, so it is transparent and safe to run.</dd>
+        <dt>The result</dt>
+        <dd><mark>[What was the result or placement?]</mark></dd>
+        <dt>Link</dt>
+        <dd><a href="https://drive.google.com/file/d/1DLPfZlgxHrqLUuMDxBEpT3l3aWQzMbZ3/view?usp=sharing">Watch the demo video</a></dd>
+      </dl>
+    </article>
+
+    <article class="feat">
+      <h3>Breathless and Weighty</h3>
+      <p class="meta">2024 · Youreka Edmonton · R</p>
+      <dl>
+        <dt>The problem</dt>
+        <dd>Does the CO₂-equivalent output of large reporting facilities relate to adult overweight and obesity rates across Alberta?</dd>
+        <dt>What I decided, and why</dt>
+        <dd>I led a team of four through data cleaning and analysis, using regression and correlation in R. <mark>[What did you decide here, and why?]</mark></dd>
+        <dt>The result</dt>
+        <dd>We found regional patterns across provinces.</dd>
+        <dt>Link</dt>
+        <dd><mark>[Add a link if there is a report]</mark></dd>
+      </dl>
+    </article>
+  </section>
+
+  <section id="work" aria-labelledby="work-h">
+    <h2 id="work-h">Work</h2>
+    <ul class="work">
+      <!-- ADD NEW WORK HERE: copy one item, paste it at the top, edit it -->
+      <li><time>Nov 2026</time><span>natHACKS 2026 · <mark>[What are you building there?]</mark></span></li>
+      <li><time>2026</time><span>COOKED, HackEd 2026 · A Socratic AI assistant that asks guiding questions instead of giving answers. I helped build the backend that filters LLM output and a React frontend.</span></li>
+      <li><time>Jan 2026 – present</time><span>Ada's Team · Peer tutor</span></li>
+      <li><time>Dec 2025 – present</time><span>Armstrong Immigration Law · Legal administrative assistant preparing documentation for accuracy and compliance</span></li>
+      <li><time>Dec 2024 – present</time><span>BGCBigs · Program staff running daily youth programming across sites, including as relief staff stepping into new groups on short notice</span></li>
+      <li><time>Sep – Dec 2024</time><span>Ray tracer in C · A full 3D ray-tracing pipeline</span></li>
+      <li><time>2024</time><span>Shine and Rise, HackEd Beta · A Python sunlight alarm that processes phone light-sensor data and triggers above a set lux threshold. Won "Funniest Git Commit."</span></li>
+      <li><time>Jan – Apr 2024</time><span>Spotify Genre Prediction · Cleaned and analyzed a large dataset, engineered features, and explained model limits to non-technical audiences</span></li>
+      <li><time><mark>[When?]</mark></time><span>Event Management App · An Android and Firebase app for events, lotteries, and waitlists</span></li>
+    </ul>
+  </section>
+
+  <section id="about" aria-labelledby="about-h">
+    <h2 id="about-h">About</h2>
+    <p>Small nonprofits run on spreadsheets and scattered records, and I like turning that mess into something a non-technical team can act on. I have worked in a nonprofit for more than two years, on the frontline with kids, while working 30+ hours a week and studying full time. As relief staff at BGCBigs I often walked into programs where I knew nobody and had to connect right away, and designing tools for non-technical staff takes the same skill.</p>
+  </section>
+
+  <section id="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">Contact</h2>
+    <ul class="contact">
+      <li><a href="mailto:oyonti@ualberta.ca">oyonti@ualberta.ca</a></li>
+      <li><a href="https://www.linkedin.com/in/oyonti-hridita-nasir/" rel="me">LinkedIn</a></li>
+      <li><a href="https://github.com/hridita11" rel="me">GitHub</a></li>
+    </ul>
+  </section>
+
+  <footer>Oyonti Hridita Nasir · Edmonton, Alberta</footer>
+</main>
+</body>
+</html>
