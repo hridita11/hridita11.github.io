@@ -3,146 +3,234 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Oyonti Hridita Nasir · Data tools for nonprofits</title>
-<meta name="description" content="I build data tools for nonprofits, like Donation Optimizer. I'm looking for people in nonprofit tech to learn from, and problems worth solving.">
+<title>Oyonti Nasir Portfolio</title>
+<meta name="description" content="Oyonti Nasir is a Computing Science student at the University of Alberta who builds machine learning and data systems. Type a command to meet her.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Oyonti Hridita Nasir · Data tools for nonprofits">
-<meta property="og:description" content="I build data tools for nonprofits, like Donation Optimizer. I'm looking for people in nonprofit tech to learn from, and problems worth solving.">
-<meta property="og:url" content="https://hridita11.github.io">
-<link rel="canonical" href="https://hridita11.github.io">
-<link rel="me" href="https://www.linkedin.com/in/oyonti-hridita-nasir/">
-<link rel="me" href="https://github.com/hridita11">
+<meta property="og:title" content="Oyonti Nasir Portfolio">
+<meta property="og:description" content="A cute little terminal where you can meet Oyonti, a Computing Science student who builds machine learning and data systems.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fredoka:wght@500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#F7F5FA; --ink:#221A2B; --muted:#5E5468; --accent:#7A2E6E; --accent-dark:#5C2152; --rule:#DDD5E6; --card:#FFFFFF;
+  --bg:#EFE8FF; --dot:#D9CCF5; --win:#FFFBFE; --bar:#F6D9E6; --ink:#3A2452; --muted:#7A6791;
+  --pink:#E8458B; --mint:#CDEFDD; --mint-ink:#1F6B47; --butter:#FFE9A8; --lav:#E6DBFB; --line:#EADFF3;
+  --shadow:#C9B6EE;
+}
+:root[data-theme="dark"]{
+  --bg:#231735; --dot:#2E2046; --win:#2D1F44; --bar:#3B2A58; --ink:#F4EAFE; --muted:#B9A6D3;
+  --pink:#FF8FBF; --mint:#2B4A3E; --mint-ink:#BDF0D6; --butter:#5A4A22; --lav:#3F2D61; --line:#43335F;
+  --shadow:#150C24;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#231735; --dot:#2E2046; --win:#2D1F44; --bar:#3B2A58; --ink:#F4EAFE; --muted:#B9A6D3;
+    --pink:#FF8FBF; --mint:#2B4A3E; --mint-ink:#BDF0D6; --butter:#5A4A22; --lav:#3F2D61; --line:#43335F;
+    --shadow:#150C24;
+  }
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 "Figtree",system-ui,sans-serif;-webkit-text-size-adjust:100%}
-main{max-width:42rem;margin:0 auto;padding:3.5rem 1.25rem 4rem}
-h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.15;margin:0}
-h1{font-size:clamp(2.4rem,9vw,3.75rem);font-weight:700;letter-spacing:-.02em}
-h2{font-size:1.6rem;font-weight:700;margin-bottom:1.25rem}
-h3{font-size:1.3rem;font-weight:500;margin-bottom:.6rem}
-section{margin-top:4rem}
-a{color:var(--accent);text-underline-offset:.2em}
-a:hover{color:var(--accent-dark)}
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:3px}
-mark{background:#FFE600;color:#222;padding:.05em .3em;border-radius:3px}
-.role{margin:.9rem 0 0;color:var(--muted)}
-.oneliner{font-size:1.3rem;line-height:1.5;margin:1.5rem 0 1.75rem;max-width:34rem}
-.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;padding:.85rem 1.4rem;border-radius:999px}
-.btn:hover{background:var(--accent-dark);color:#fff}
-.now{margin-top:2rem;padding:.9rem 1.1rem;background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--accent);border-radius:6px}
-.now b{font-weight:600}
-.feat{padding:0 0 0 1.25rem;margin-bottom:2.5rem;border-left:3px solid var(--accent)}
-.feat dl{margin:0}
-.feat dt{font-weight:600;margin-top:.7rem}
-.feat dd{margin:.1rem 0 0}
-.feat .meta{color:var(--muted);font-size:.95rem;margin:0 0 .4rem}
-.work{list-style:none;margin:0;padding:0}
-.work li{display:grid;grid-template-columns:8.5rem 1fr;gap:.25rem 1rem;padding:.75rem 0;border-top:1px solid var(--rule)}
-.work li:last-child{border-bottom:1px solid var(--rule)}
-.work time{color:var(--muted);font-size:.95rem}
-.contact{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem 1.75rem}
-footer{margin-top:4rem;color:var(--muted);font-size:.9rem}
-@media (max-width:34rem){.work li{grid-template-columns:1fr}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+html,body{height:100%}
+body{margin:0;background:var(--bg);background-image:radial-gradient(var(--dot) 1.5px,transparent 1.5px);background-size:22px 22px;
+  color:var(--ink);font:400 15px/1.6 "DM Mono",ui-monospace,monospace;display:flex;align-items:center;justify-content:center;padding:16px}
+.win{width:100%;max-width:780px;height:min(86vh,720px);background:var(--win);border:3px solid var(--ink);border-radius:22px;
+  box-shadow:8px 8px 0 var(--shadow);display:flex;flex-direction:column;overflow:hidden}
+.bar{display:flex;align-items:center;gap:12px;padding:10px 16px;background:var(--bar);border-bottom:3px solid var(--ink)}
+.dots{display:flex;gap:7px}
+.dots i{width:13px;height:13px;border-radius:50%;border:2px solid var(--ink);display:block}
+.dots i:nth-child(1){background:#FF8FA3}.dots i:nth-child(2){background:#FFD97A}.dots i:nth-child(3){background:#9FE3C0}
+.title{font:600 15px "Fredoka",sans-serif;flex:1;text-align:center;margin-right:46px}
+#face{font-size:15px;white-space:nowrap}
+#out{flex:1;overflow-y:auto;padding:18px 20px 8px;scroll-behavior:smooth}
+.line{margin:0 0 10px;overflow-wrap:anywhere}
+.echo{color:var(--muted)}
+.hero{font:600 clamp(26px,6vw,38px)/1.15 "Fredoka",sans-serif;margin:4px 0 6px;letter-spacing:.2px}
+.cursor{display:inline-block;width:.55em;height:1em;background:var(--pink);vertical-align:-.12em;margin-left:2px;border-radius:2px;animation:blink 1.1s steps(2,start) infinite}
+@keyframes blink{to{visibility:hidden}}
+h3{font:600 19px "Fredoka",sans-serif;margin:2px 0 4px}
+.tag{display:inline-block;background:var(--lav);border:2px solid var(--ink);border-radius:999px;padding:0 10px;font-size:12px;margin:0 6px 4px 0}
+.tag.mint{background:var(--mint);color:var(--mint-ink)}
+.tag.butter{background:var(--butter)}
+.card{background:var(--win);border:2px solid var(--ink);border-radius:14px;padding:12px 14px;margin:0 0 10px;box-shadow:3px 3px 0 var(--shadow)}
+.list{list-style:none;margin:0 0 10px;padding:0;display:grid;gap:6px}
+.list button{all:unset;box-sizing:border-box;cursor:pointer;display:block;width:100%;padding:8px 12px;border:2px solid var(--ink);border-radius:12px;background:var(--win)}
+.list button:hover,.list button:focus-visible{background:var(--lav)}
+.list b{font-weight:500;color:var(--pink)}
+.list span{color:var(--muted);display:block;font-size:13px}
+a{color:var(--pink);text-underline-offset:3px;font-weight:500}
+a:hover{background:var(--butter);color:var(--ink)}
+:focus-visible{outline:3px solid var(--pink);outline-offset:2px;border-radius:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:8px 20px 0}
+.chips button{font:500 13px "DM Mono",monospace;color:var(--ink);background:var(--lav);border:2px solid var(--ink);border-radius:999px;padding:3px 12px;cursor:pointer}
+.chips button:hover,.chips button:focus-visible{background:var(--butter);transform:translateY(-1px)}
+.chips button:active{transform:translateY(1px)}
+form{display:flex;align-items:center;gap:8px;padding:12px 20px 16px}
+label{color:var(--pink);font-weight:500;white-space:nowrap}
+input{flex:1;min-width:0;font:400 16px "DM Mono",monospace;color:var(--ink);background:transparent;border:0;outline:0;caret-color:var(--pink)}
+input::placeholder{color:var(--muted)}
+.kbd{background:var(--lav);border:2px solid var(--ink);border-radius:6px;padding:0 6px;font-size:12px}
+noscript p{padding:16px 20px;margin:0}
+@media (max-width:520px){.win{height:92vh;border-radius:18px;box-shadow:5px 5px 0 var(--shadow)}.title{display:none}.bar{justify-content:space-between}label span{display:none}}
+@media (prefers-reduced-motion:reduce){.cursor{animation:none}#out{scroll-behavior:auto}.chips button:hover{transform:none}}
 </style>
 </head>
 <body>
-<main>
-  <header>
-    <h1>Oyonti Hridita Nasir</h1>
-    <p class="role">Computing Science student, University of Alberta · Edmonton</p>
-    <p class="oneliner">I build data tools for nonprofits, like Donation Optimizer. I'm looking for people in nonprofit tech to learn from, and problems worth solving.</p>
-    <a class="btn" href="mailto:oyonti@ualberta.ca">Email me about a problem worth solving</a>
-    <p class="now"><b>Now:</b> Getting ready for natHACKS in November. <mark>[What else are you working on this month?]</mark></p>
-  </header>
-
-  <section id="featured" aria-labelledby="featured-h">
-    <h2 id="featured-h">Featured</h2>
-
-    <article class="feat">
-      <h3>Donation Optimizer</h3>
-      <p class="meta">2026 · FastAPI, SQLite, Next.js</p>
-      <dl>
-        <dt>The problem</dt>
-        <dd><mark>[What problem were you solving for donors or campaigns?]</mark></dd>
-        <dt>What I decided, and why</dt>
-        <dd>I matched each donation to GoFundMe campaigns that the gift would complete or push to a milestone, and showed the reasoning in plain language. GoFundMe has no public API, so I built a periodic data-fetch pipeline to keep campaign data current.</dd>
-        <dt>The result</dt>
-        <dd><mark>[What was the result?]</mark></dd>
-        <dt>Link</dt>
-        <dd><mark>[Add a live link or GitHub link when you have one]</mark></dd>
-      </dl>
-    </article>
-
-    <article class="feat">
-      <h3>Chronically Online</h3>
-      <p class="meta">Harvest Anti-Muslim Hate Hackathon (GNCI)</p>
-      <dl>
-        <dt>The problem</dt>
-        <dd>A false claim can spread across platforms faster than anyone can check it, and people who respond need practice making calls under that pressure.</dd>
-        <dt>What I decided, and why</dt>
-        <dd>I built a 30-minute browser simulation of a false claim spreading across six fictional platforms, scored on Harmful Reach against Awareness. I chose deterministic mechanics and no network calls, so it is transparent and safe to run.</dd>
-        <dt>The result</dt>
-        <dd><mark>[What was the result or placement?]</mark></dd>
-        <dt>Link</dt>
-        <dd><a href="https://drive.google.com/file/d/1DLPfZlgxHrqLUuMDxBEpT3l3aWQzMbZ3/view?usp=sharing">Watch the demo video</a></dd>
-      </dl>
-    </article>
-
-    <article class="feat">
-      <h3>Breathless and Weighty</h3>
-      <p class="meta">2024 · Youreka Edmonton · R</p>
-      <dl>
-        <dt>The problem</dt>
-        <dd>Does the CO₂-equivalent output of large reporting facilities relate to adult overweight and obesity rates across Alberta?</dd>
-        <dt>What I decided, and why</dt>
-        <dd>I led a team of four through data cleaning and analysis, using regression and correlation in R. <mark>[What did you decide here, and why?]</mark></dd>
-        <dt>The result</dt>
-        <dd>We found regional patterns across provinces.</dd>
-        <dt>Link</dt>
-        <dd><mark>[Add a link if there is a report]</mark></dd>
-      </dl>
-    </article>
-  </section>
-
-  <section id="work" aria-labelledby="work-h">
-    <h2 id="work-h">Work</h2>
-    <ul class="work">
-      <!-- ADD NEW WORK HERE: copy one item, paste it at the top, edit it -->
-      <li><time>Nov 2026</time><span>natHACKS 2026 · <mark>[What are you building there?]</mark></span></li>
-      <li><time>2026</time><span>COOKED, HackEd 2026 · A Socratic AI assistant that asks guiding questions instead of giving answers. I helped build the backend that filters LLM output and a React frontend.</span></li>
-      <li><time>Jan 2026 – present</time><span>Ada's Team · Peer tutor</span></li>
-      <li><time>Dec 2025 – present</time><span>Armstrong Immigration Law · Legal administrative assistant preparing documentation for accuracy and compliance</span></li>
-      <li><time>Dec 2024 – present</time><span>BGCBigs · Program staff running daily youth programming across sites, including as relief staff stepping into new groups on short notice</span></li>
-      <li><time>Sep – Dec 2024</time><span>Ray tracer in C · A full 3D ray-tracing pipeline</span></li>
-      <li><time>2024</time><span>Shine and Rise, HackEd Beta · A Python sunlight alarm that processes phone light-sensor data and triggers above a set lux threshold. Won "Funniest Git Commit."</span></li>
-      <li><time>Jan – Apr 2024</time><span>Spotify Genre Prediction · Cleaned and analyzed a large dataset, engineered features, and explained model limits to non-technical audiences</span></li>
-      <li><time><mark>[When?]</mark></time><span>Event Management App · An Android and Firebase app for events, lotteries, and waitlists</span></li>
-    </ul>
-  </section>
-
-  <section id="about" aria-labelledby="about-h">
-    <h2 id="about-h">About</h2>
-    <p>Small nonprofits run on spreadsheets and scattered records, and I like turning that mess into something a non-technical team can act on. I have worked in a nonprofit for more than two years, on the frontline with kids, while working 30+ hours a week and studying full time. As relief staff at BGCBigs I often walked into programs where I knew nobody and had to connect right away, and designing tools for non-technical staff takes the same skill.</p>
-  </section>
-
-  <section id="contact" aria-labelledby="contact-h">
-    <h2 id="contact-h">Contact</h2>
-    <ul class="contact">
-      <li><a href="mailto:oyonti@ualberta.ca">oyonti@ualberta.ca</a></li>
-      <li><a href="https://www.linkedin.com/in/oyonti-hridita-nasir/" rel="me">LinkedIn</a></li>
-      <li><a href="https://github.com/hridita11" rel="me">GitHub</a></li>
-    </ul>
-  </section>
-
-  <footer>Oyonti Hridita Nasir · Edmonton, Alberta</footer>
+<main class="win" aria-label="Oyonti's portfolio terminal">
+  <div class="bar">
+    <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="title">oyonti's little corner</div>
+    <div id="face" aria-hidden="true">(˶ᵔ ᵕ ᵔ˶)</div>
+  </div>
+  <div id="out" role="log" aria-live="polite"></div>
+  <div class="chips" id="chips" aria-label="Quick commands"></div>
+  <form id="form" autocomplete="off">
+    <label for="cmd">♡<span> oyonti@home ~ </span>$</label>
+    <input id="cmd" type="text" placeholder="type help, or tap a button" spellcheck="false" autocapitalize="off" autocorrect="off" enterkeyhint="go">
+  </form>
+  <noscript><p>Hi, I'm Oyonti Nasir, a Computing Science student at the University of Alberta who builds machine learning and data systems. This page is an interactive terminal and needs JavaScript. You can reach me at hriditanasirr@gmail.com.</p></noscript>
 </main>
+
+<script>
+(function(){
+  var out=document.getElementById('out'), input=document.getElementById('cmd'), face=document.getElementById('face');
+  var form=document.getElementById('form'), chipsEl=document.getElementById('chips');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var history=[], hi=0;
+
+  var EMAIL='hriditanasirr@gmail.com';
+  var LINKEDIN='https://www.linkedin.com/in/oyonti-hridita-nasir/';
+  var GITHUB='https://github.com/hridita11';
+
+  var projects={
+    water:{name:'water-plant attack detector',tags:['natHACKS 2026','team of 6','LSTM'],
+      blurb:'catches hacked sensors and pumps in water plants',
+      body:'At natHACKS 2026 I learned that the places that clean your tap water can be hacked. Our team built something to catch it: a sensor lying about how full a tank is, or a pump switched off by someone who should not touch it.<br><br>I designed and trained the LSTM model that learns what normal looks like. We only had 4 real attacks to learn from, so we built a simulator, trained on thousands of fake attacks, then on the real data. <b>That caught almost 3x more real attacks than without the simulator.</b> Built in 64 hours with Dev Goradia, Neila Khudaibergenova, Vanya Batish, Zyle Diaz, and Ashar Alam.<br><br>Lesson learned: never name a git branch after yourself.'},
+    spotify:{name:'spotify genre predictor',tags:['CMPUT 195','83.7% test accuracy'],
+      blurb:'guesses a song\'s genre from its audio features',
+      body:'A multivariable logistic regression model that predicts genre from audio features, reaching <b>83.7% test accuracy</b>. Python, pandas, and scikit-learn, with all the data cleaning and preprocessing. My CMPUT 195 final research project.'},
+    emissions:{name:'breathless and weighty',tags:['Youreka Edmonton','R'],
+      blurb:'does Alberta\'s CO₂ relate to obesity?',
+      body:'I led a team of 4 asking whether CO₂ emissions across Alberta (2015 to 2021) relate to adult obesity rates. We checked our assumptions, ran a Spearman correlation (p = 0.78), and reported what we found: no link we could support. We wrote down our limitations too. Honest results count.'},
+    donation:{name:'donation optimizer',tags:['FastAPI','SQLite','Next.js'],
+      blurb:'matches your gift to campaigns it would complete',
+      body:'Give $20 and it finds a GoFundMe campaign that $20 would actually complete or push to a milestone, then explains why in plain language. GoFundMe has no public API, so I designed a scheduled data-fetch pipeline to keep the data fresh.'},
+    codes:{name:'building codes challenge',tags:['Edmonton Unlimited'],
+      blurb:'an AI checker for building-code applications',
+      body:'A prototype AI tool that checks alternative-solution applications for completeness and code references. We did not make the semi-finals, but I built it anyway and learned a lot about turning rule-heavy documents into checks a computer can run.'},
+    cooked:{name:'COOKED',tags:['HackEd 2026','React','Python'],
+      blurb:'an AI that asks questions instead of giving answers',
+      body:'A Socratic assistant that guides you with leading questions instead of handing you the solution. I built the Python backend that does the prompt engineering and filters the model so it never spoon-feeds.'},
+    online:{name:'chronically online',tags:['Harvest Anti-Muslim Hate Hackathon'],
+      blurb:'a 30-minute misinformation response simulator',
+      body:'A browser simulation of a false claim spreading across 6 fictional platforms. You have 30 minutes to slow it down, scored on Harmful Reach against Awareness. Everything in it is fictional, and it runs in a single HTML file with no network calls.'}
+  };
+
+  function esc(s){return s.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function line(html,cls){var d=document.createElement('div');d.className='line'+(cls?' '+cls:'');d.innerHTML=html;out.appendChild(d);return d}
+  function toBottom(){out.scrollTop=out.scrollHeight}
+  function setFace(f){face.textContent=f}
+  function btnList(items){
+    return '<ul class="list">'+items.map(function(i){return '<li><button type="button" data-cmd="'+i[0]+'"><b>'+i[1]+'</b><span>'+i[2]+'</span></button></li>'}).join('')+'</ul>';
+  }
+
+  var commands={
+    help:function(){return '<h3>things you can type</h3>'+btnList([
+      ['about','about','who is oyonti?'],
+      ['story','story','how i got here'],
+      ['projects','projects','things i built, with real numbers'],
+      ['kids','kids','my favourite job'],
+      ['dance','dance','the side the resume skips'],
+      ['voice','voice','women\'s rights work'],
+      ['math','math','my first love'],
+      ['skills','skills','the toolbox'],
+      ['contact','contact','say hi, or hire me for summer 2027'],
+      ['theme','theme','switch light and dark']
+    ])},
+    about:function(){return '<div class="card"><h3>hi, i\'m Oyonti ♡</h3>I\'m a Computing Science student (math minor) at the University of Alberta, from Bangladesh, living in Edmonton. I build machine learning and data systems, and I want to use them to help people.<br><br><span class="tag mint">looking for a summer 2027 internship in data analysis or data systems</span></div>'},
+    story:function(){return '<div class="card"><h3>how i got here</h3>I come from a place where education, especially for girls, isn\'t something you\'re just handed. I fought my own family for the chance to study here, and I\'ve paid for my degree myself ever since, working 30+ hours a week.<br><br>That\'s why I care about <i>educating</i> people, not just teaching them: so they know they have a voice and a choice. Education gave me mine.</div>'},
+    projects:function(){return '<h3>projects</h3>'+btnList(Object.keys(projects).map(function(k){return ['open '+k,projects[k].name,projects[k].blurb]}))+'<div class="line echo">tap one, or type <span class="kbd">open water</span></div>'},
+    open:function(arg){
+      var p=projects[arg];
+      if(!p){return 'which one? try <span class="kbd">open water</span>, or type <span class="kbd">projects</span> to see them all.'}
+      return '<div class="card"><h3>'+p.name+'</h3>'+p.tags.map(function(t){return '<span class="tag">'+t+'</span>'}).join('')+'<br>'+p.body+'</div>';
+    },
+    kids:function(){return '<div class="card"><h3>miss O ♡</h3>At BGCBigs I spend my afternoons with kids: tutoring, playing games, and helping them build skills. Somewhere along the way I became "Miss O" to a lot of them, and it fills my heart more than any commit ever could.<br><br>Some days are hard. I\'ve learned to meet kids where they are instead of expecting them to meet me where I am.</div>'},
+    dance:function(){return '<div class="card"><h3>the side the resume skips</h3>I perform with the Bangladesh Students\' Association at the U of A, as a cultural arts performer. I love love love dancing and singing, and I want to keep our culture and history alive, even from far away.</div>'},
+    voice:function(){return '<div class="card"><h3>voice for change</h3>I volunteer with Voice for Change, a women\'s rights organization, on the operations side: logistics, spreading awareness, and keeping the posts moving. I want people, especially women who\'ve been told they have no voice, to know they do.</div>'},
+    math:function(){return '<div class="card"><h3>math, always</h3>I\'ve always been a math lover. I help people with math and stats wherever I can: as an Ada\'s Team peer tutor, and in Facebook groups back home.</div>'},
+    skills:function(){return '<div class="card"><h3>toolbox</h3><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">scikit-learn</span><span class="tag">LSTM</span><span class="tag">SQL</span><span class="tag">R</span><span class="tag">FastAPI</span><span class="tag">SQLite</span><span class="tag">Next.js / React</span><span class="tag">Firebase</span><span class="tag">Android</span><span class="tag">C</span><span class="tag">Git</span><span class="tag">Power BI</span></div>'},
+    contact:function(){return '<div class="card"><h3>say hi</h3>Email: <a href="mailto:'+EMAIL+'">'+EMAIL+'</a><br>LinkedIn: <a href="'+LINKEDIN+'" target="_blank" rel="noopener">oyonti-hridita-nasir</a><br>GitHub: <a href="'+GITHUB+'" target="_blank" rel="noopener">hridita11</a></div>'},
+    theme:function(){
+      var cur=document.documentElement.getAttribute('data-theme');
+      if(!cur){cur=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}
+      var next=cur==='dark'?'light':'dark';
+      document.documentElement.setAttribute('data-theme',next);
+      return next==='dark'?'night mode on. sleepy, but still building ☾':'day mode on. rise and shine ☀';
+    },
+    clear:function(){out.innerHTML='';return null},
+    whoami:function(){return commands.about()},
+    ls:function(){return commands.help()},
+    coffee:function(){return 'one oat latte, coming up ☕ (i\'m always up for a coffee chat about data, ML, or non-profit tech)'},
+    sudo:function(){return 'permission granted ♡ now send me an email: <a href="mailto:'+EMAIL+'">'+EMAIL+'</a>'}
+  };
+  commands.hire=commands.contact;
+  commands.projectlist=commands.projects;
+
+  function run(raw,focus){
+    var text=raw.trim();
+    if(!text) return;
+    history.push(text); hi=history.length;
+    line('<span class="echo">♡ ~ $ '+esc(text)+'</span>');
+    var parts=text.toLowerCase().split(/\s+/);
+    var name=parts[0], arg=parts[1];
+    if(name==='cat'||name==='cd'){name=arg||''; arg=parts[2]}
+    var fn=commands[name];
+    if(projects[name]){fn=commands.open; arg=name}
+    var html;
+    if(fn){html=fn(arg); setFace('(˶ᵔ ᵕ ᵔ˶)')}
+    else{html='hmm, i don\'t know "'+esc(parts[0])+'" yet. try <span class="kbd">help</span>'; setFace('(•_•;)')}
+    if(html!==null) line(html);
+    toBottom();
+    if(focus) input.focus({preventScroll:true});
+  }
+
+  // chips
+  ['about','story','projects','kids','dance','math','contact'].forEach(function(c){
+    var b=document.createElement('button'); b.type='button'; b.textContent=c; b.setAttribute('data-cmd',c); chipsEl.appendChild(b);
+  });
+  document.addEventListener('click',function(e){
+    var t=e.target.closest('[data-cmd]'); if(!t) return;
+    run(t.getAttribute('data-cmd'),false);
+  });
+
+  form.addEventListener('submit',function(e){e.preventDefault(); var v=input.value; input.value=''; run(v,true)});
+  input.addEventListener('keydown',function(e){
+    if(e.key==='ArrowUp'){e.preventDefault(); if(hi>0){hi--; input.value=history[hi]||''}}
+    else if(e.key==='ArrowDown'){e.preventDefault(); if(hi<history.length-1){hi++; input.value=history[hi]}else{hi=history.length; input.value=''}}
+    else if(e.key==='Tab'){
+      e.preventDefault();
+      var v=input.value.toLowerCase(); if(!v) return;
+      var all=Object.keys(commands).concat(Object.keys(projects));
+      var m=all.filter(function(k){return k.indexOf(v)===0});
+      if(m.length===1) input.value=m[0];
+    }
+  });
+
+  // intro: type the greeting once
+  var hero=line('<span class="hero"></span><span class="cursor" aria-hidden="true"></span>');
+  var heroText=hero.querySelector('.hero'), msg="hi, i'm Oyonti ♡";
+  function afterHero(){
+    var c=hero.querySelector('.cursor'); if(c) c.remove();
+    line('I\'m a Computing Science student who builds machine learning and data systems. I made this little terminal so you can get to know me, including the parts a resume can\'t fit.');
+    line('<span class="echo">tap a button below, or type</span> <span class="kbd">help</span>');
+    toBottom();
+  }
+  if(reduce){heroText.textContent=msg; afterHero()}
+  else{
+    var i=0;
+    (function tick(){ heroText.textContent=msg.slice(0,++i); if(i<msg.length) setTimeout(tick,70); else setTimeout(afterHero,350) })();
+  }
+})();
+</script>
 </body>
 </html>
